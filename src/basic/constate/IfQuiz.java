@@ -1,5 +1,6 @@
 package basic.constate;
 
+import javax.lang.model.SourceVersion;
 import java.util.Scanner;
 
 public class IfQuiz {
@@ -11,23 +12,40 @@ public class IfQuiz {
              판별이 될 때마다 각각의 변수에 값을 넣어줍니다.
              마지막에 한번에 출력하시면 되겠습니다.
         */
-
+        System.out.println("정수 3개를 입력해 주세요 : ");
         Scanner sc1 = new Scanner(System.in);
         Scanner sc2 = new Scanner(System.in);
         Scanner sc3 = new Scanner(System.in);
 
-        int num1, num2, num3, tmp = 0;
+        int min = sc1.nextInt();
+        int mid = sc1.nextInt();
+        int max = sc1.nextInt();
+        int tmp = 0;
 
-        num1 = sc1.nextInt();
-        num2 = sc1.nextInt();
-        num3 = sc1.nextInt();
 
+        if(min > mid) {
+            tmp = min;
+            min = mid;
+            mid = tmp;
+        }
+
+        if(min > max) {
+            tmp = min;
+            min = max;
+            max = tmp;
+        }
+
+        if(mid > max) {
+            tmp = mid;
+            mid = max;
+            max = tmp;
+        }
+
+        System.out.printf("min : %d, mid : %d, max : %d",min, mid, max);
 
         sc1.close();
         sc2.close();
         sc3.close();
-
-        int max, mid, min;
 
 
     }

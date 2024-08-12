@@ -20,5 +20,7 @@ public class WhileQuiz02 {
         } else {
             System.out.printf("%d는 소수가 아닙니다.", num);
         }
+
+        sc.close();
     }
 }

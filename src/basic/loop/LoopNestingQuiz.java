@@ -28,6 +28,7 @@ public class LoopNestingQuiz {
         System.out.println();
         System.out.println("소수의 개수 : " + resultCount);
 
+        sc.close();
 
     }
 }

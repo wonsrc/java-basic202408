@@ -24,5 +24,10 @@ public class WhileQuiz01 {
         }
 
         System.out.println("result = " + result);
+
+        sc1.close();
+        sc2.close();
     }
+
+
 }
