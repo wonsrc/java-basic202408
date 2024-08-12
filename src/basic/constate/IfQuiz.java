@@ -16,6 +16,13 @@ public class IfQuiz {
         Scanner sc2 = new Scanner(System.in);
         Scanner sc3 = new Scanner(System.in);
 
+        int num1, num2, num3, tmp = 0;
+
+        num1 = sc1.nextInt();
+        num2 = sc1.nextInt();
+        num3 = sc1.nextInt();
+
+
         sc1.close();
         sc2.close();
         sc3.close();
