@@ -25,8 +25,7 @@ public class ArraySearch {
                  [비교문자열1.equals(비교문자열2)] 를 사용하여
                  진행해야 합니다.
              */
-//        boolean flag = false;
-        int idx = -1;
+        boolean flag = false;
         for (int i = 0; i < foods.length; i++) {
             if(name.equals(foods[i])) {
                 System.out.println("탐색 완료!");
@@ -35,8 +34,9 @@ public class ArraySearch {
                 break;
             }
         }
-//        if(!flag) {
-//            System.out.println("없는 음식입니다.");
-//        }
+        if(!flag) {
+            System.out.println("없는 음식입니다.");
+        }
+        sc.close();
     }
 }
