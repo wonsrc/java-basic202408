@@ -11,17 +11,32 @@ public class WhileQuiz01 {
 
         int x = sc1.nextInt();
         int y = sc2.nextInt();
-
         int tmp = 0;
+        /*
+        int start = x > y ? y : x;
+        int end = x > y ? x : y;
+
+        int total = 0;
+        while(start <= end) {
+            total += start;
+            start++;
+        }*/
+
         if(x > y) {
             tmp = x;
             x = y;
             y = tmp;
         }
+        int n = x;
+
         int result = 0;
-        for(int i = x; i <= y; i++) {
-            result += i;
+        while(n <= y) {
+            result += n;
+            n++;
         }
+//        for(int i = x; i <= y; i++) {
+//            result += i;
+//        }
 
         System.out.println("result = " + result);
 

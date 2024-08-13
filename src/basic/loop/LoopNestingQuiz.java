@@ -14,6 +14,8 @@ public class LoopNestingQuiz {
 
         System.out.print("소수 : ");
         for(int i = 1; i <= num; i++) {
+            // 소수 판별을 위해 나누어 떨어진 횟수를 세어 줄 변수
+            // 반복문 내부에 선언을 해서, i++이 될떄마다 0으로 초기화 되어야 함.
             int cnt = 0;
             for(int j = 1; j <= i; j++) {
                 if(i % j == 0){
