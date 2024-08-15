@@ -91,5 +91,6 @@ public class MethodQuiz {
 
         pop();
         printFoods();
+
     }
 }
