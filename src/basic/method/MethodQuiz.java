@@ -7,23 +7,59 @@ public class MethodQuiz {
     static String[] foods = {"chicken", "pasta","beef"};
 
     // 원하는 인덱스 위치에 요소를 삽입하는 메서드를 작성하세요.
-    // targetIndex는 기존 foods의 배열 인덱스 범위 내여야 합니다.
-//     void insert(int targetIndex, String newFoodName)
+//     targetIndex는 기존 foods의 배열 인덱스 범위 내여야 합니다.
+     static void insert(int targetIndex, String newFoodName) {
+         if (isOutOfBounds(targetIndex)) return;
+         String[] tmp = copy(1);
+
+         for (int i = foods.length; i > targetIndex ; i--) {
+             tmp[i] = tmp[i-1];
+         }
+         tmp[targetIndex] = newFoodName;
+         foods = tmp;
+     }
+
+
 
     // 원하는 인덱스 위치의 요소를 수정하는 메서드를 작성하세요.
-    // void modify(int targetIndex, String newFoodName)
     // targetIndex는 기존 foods의 배열 인덱스 범위 내여야 합니다.
+    static void modify(int targetIndex, String newFoodName){
+         if(isOutOfBounds(targetIndex)) return;
+         foods[targetIndex] = newFoodName;
+    }
 
 
     // 특정 인덱스가 범위 내의 올바른 인덱스인지를 확인하는 메서드를 작성하세요.
-    // boolean isOutOfBounds(int targetIndex)
     // 작성이 완료되면 타 메서드에서 활용할 수 있을 것입니다.
+    static boolean isOutOfBounds(int targetIndex) {
+        return targetIndex > foods.length - 1 || targetIndex < 0;
+//        if(targetIndex > foods.length || targetIndex < 0) {
+//            System.out.println("인덱스 범위가 올바르지 않아요!");
+//            return true;
+//        }
+//        return false;
+    }
+
 
     // 특정 인덱스의 요소를 삭제하는 메서드를 작성하세요.
-    // void remove(String deleteTarget)
+     static void remove(String deleteTarget) {
+         int index = indexOf((deleteTarget));
+         if(index == -1) return;
+
+         for (int i = index; i < foods.length-1; i++) {
+             foods[i] = foods[i+1];
+         }
+
+         pop();
+     }
+
 
     // 배열 내부를 깔끔하게 비워버리는 메서드를 작성하세요. (삭제 반복 x)
-    // void clear()
+    static void clear() {
+         foods = new String[]{};
+    }
+
+
     // 배열 내부 한눈에 보기
     static void printFoods() {
         System.out.println(Arrays.toString(foods));
@@ -91,6 +127,26 @@ public class MethodQuiz {
 
         pop();
         printFoods();
+
+        System.out.println("-------------------------");
+
+        insert(3,"apple");
+        printFoods();
+        insert(500,"ricecake");
+        printFoods();
+
+        System.out.println("------------------------------");
+        modify(2,"hamburger");
+        printFoods();
+        System.out.println("------------------------------");
+        remove("hamburger");
+        printFoods();
+
+        System.out.println("------------------------------");
+
+
+
+
 
     }
 }
