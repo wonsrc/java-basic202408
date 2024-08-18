@@ -32,7 +32,7 @@ public class MethodQuizPractice {
         tmp[targetIndex] = newFoodName;
 
         foods = tmp;
-                
+
      }
 
     // 특정 인덱스가 범위 내의 올바른 인덱스인지를 확인하는 메서드를 작성하세요.
