@@ -11,7 +11,11 @@ public class TryCatchExample {
         System.out.println("정수2: ");
         int j = sc.nextInt();
 
-        System.out.printf("%d / %d = %d\n", i, j, i / j);
+        try {
+            System.out.printf("%d / %d = %d\n", i, j, i / j);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         System.out.println("프로그램 정상 종료!");
 
