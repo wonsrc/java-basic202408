@@ -103,6 +103,7 @@ public class LottoSimulator {
 
             if (prize1 == 1) {
                 System.out.println("축하합니다! 1등에 당첨되셨습니다.");
+                System.out.println(myLotto);
                 System.out.printf("누적 당첨 횟수\n2등: %d회\n3등: %d회\n4등: %d회\n5등: %d회\n꽝: %d회\n"
                         , prize2, prize3, prize4, prize5, failCnt);
 
@@ -111,7 +112,6 @@ public class LottoSimulator {
 
                 break; // 1등 당첨이 한 번이라도 된다면 반복문 종료.
             } else {
-                System.out.println(myLotto);
                 System.out.println("로또 " + paper + "장 째 구매 중...");
             }
 
