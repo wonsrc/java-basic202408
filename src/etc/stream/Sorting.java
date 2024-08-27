@@ -12,7 +12,7 @@ public class Sorting {
         // 육류 요리 중 칼로리가 낮은 순으로 정렬하기
         menuList.stream()
                 .filter(dish -> dish.getType() == Dish.Type.MEAT)
-                .sorted(Comparator.comparing(dish -> dish.getCalories()))
+                .sorted(Comparator.comparing(Dish::getCalories).reversed())
                 .collect(Collectors.toList())
                 .forEach(dish -> System.out.println(dish));
 

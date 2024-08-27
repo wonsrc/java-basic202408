@@ -12,8 +12,8 @@ public class Utility {
         sc = new Scanner(System.in);
     }
 
-    public static void makeLIne() {
-        System.out.println("==============================================");
+    public static void makeLine() {
+        System.out.println("=================================================================================");
     }
 
     // 문자열 입력을 처리
